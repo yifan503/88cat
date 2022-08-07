@@ -1,10 +1,24 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from './pages/About'
+import DashBoard from './pages/DashBoard'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import Heading from './components/Heading'
+import Profile from './pages/Profile'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Start From Now!</h1>
-    </div>
+    <BrowserRouter>
+      <Heading />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Dashboard" element={<DashBoard />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
