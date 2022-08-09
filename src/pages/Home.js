@@ -13,9 +13,9 @@ function Home (){
             </div>
             <div className="row mt-2">
                 <div className="offset-md-1">
-                    <h2>
+                    <h1 className="display-3">
                         Discover popular products
-                    </h2>
+                    </h1>
                 </div>
             </div>
             <PopularProducts />

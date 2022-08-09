@@ -6,7 +6,7 @@ import '../common/style/Navbar.css'
 function Navbar (){
     return(
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+            <nav className="navbar navbar-expand-lg navbar-light justify-content-center">
                 <div>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
