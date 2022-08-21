@@ -5,17 +5,18 @@ import PopularProducts from '../components/PopularProducts'
 
 function Home (){
     return(
-        <div className="container">
+        <div className="container pt-4">
             <div className="row">
                 <div className="col-md-10 offset-md-1">
                     <Carousel />
                 </div>
             </div>
-            <div className="row mt-2">
+            <div style={{marginTop:"150px"}}></div>
+            <div className="row mt-4">
                 <div className="offset-md-1">
-                    <h1 className="display-3">
+                    <h2>
                         Discover popular products
-                    </h1>
+                    </h2>
                 </div>
             </div>
             <PopularProducts />

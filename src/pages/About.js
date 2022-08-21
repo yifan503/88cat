@@ -1,15 +1,12 @@
 import React from 'react'
-import {useLocation} from "react-router-dom"
+import axios from 'axios'
+import {API} from '../components/API'
 
 function About (){
-    const location = useLocation();
-    const {from, pathname} = location;
-    console.log(location);
-
     return(
-        <div>
+        <div className="container">
             <h1>About</h1>
-            <p>from {from}, and located at {pathname} </p>
+            
         </div>
     );
 }

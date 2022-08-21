@@ -7,6 +7,9 @@ import NotFound from './pages/NotFound'
 import Heading from './components/Heading'
 import Profile from './pages/Profile'
 import Footer from './components/Footer'
+import LoginWithNavigate from './pages/Login'
+import RegisterWithNavigate from './pages/Register'
+import ShoppingCart from './pages/ShoppingCart'
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Dashboard" element={<DashBoard />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/Login" element={<LoginWithNavigate />} />
+        <Route path="/ShoppingCart" element={<ShoppingCart />} />
+        <Route path="/Register" element={<RegisterWithNavigate />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
