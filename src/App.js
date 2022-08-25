@@ -10,10 +10,14 @@ import Footer from './components/Footer'
 import LoginWithNavigate from './pages/Login'
 import RegisterWithNavigate from './pages/Register'
 import ShoppingCart from './pages/ShoppingCart'
+import CatsTreats from './pages/CatsTreats'
+import CatsToys from './pages/CatsToys'
+import CatsCare from './pages/CatsCare'
+import AllProducts from './pages/AllProducts'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/'>
       <Heading />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +27,10 @@ function App() {
         <Route path="/Login" element={<LoginWithNavigate />} />
         <Route path="/ShoppingCart" element={<ShoppingCart />} />
         <Route path="/Register" element={<RegisterWithNavigate />} />
+        <Route path="/CatsTreats" element={<CatsTreats />} />
+        <Route path="/CatsToys" element={<CatsToys />} />
+        <Route path="/CatsCare" element={<CatsCare />} />
+        <Route path="/AllProducts" element={<AllProducts />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

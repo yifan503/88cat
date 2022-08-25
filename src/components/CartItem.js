@@ -43,22 +43,24 @@ function CartItem(props){
 
     return (
         <div>
-            <div className="row">
+            <div className="row offset-md-2">
                 <div className="col-md-2">
                     <img src={props.img} style={{width:"100%"}} alt=".." />
                 </div>
-                <div className="col-2">
+                <div className="col-2 align-self-center">
                     {props.name}
                 </div>
-                <div className="col-1">
+                <div className="col-1 align-self-center">
                     {props.price}
                 </div>
-                <div className="col-1">
-                    <button onClick={ReduceItem} className="me-1">-</button>
-                    {props.amount}
-                    <button onClick={AddItem} className="ms-1" >+</button>
+                <div className="col-1 align-self-center btn-group">
+                    <button onClick={ReduceItem} className="me-1 btn btn-light">-</button>
+                    <div className="align-self-center">
+                        {props.amount}
+                    </div>
+                    <button onClick={AddItem} className="ms-1 btn btn-light" >+</button>
                 </div>
-                <div className="col-1">
+                <div className="col-1 align-self-center">
                     <button 
                     className="btn btn-outline-danger"
                     onClick={RemoveItem}

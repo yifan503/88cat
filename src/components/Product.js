@@ -37,14 +37,14 @@ function Product (props){
                 <img src={props.img} alt=".." />
             </div>
             <div className="row text-center mb-3">
-                <span>{props.name}</span>
+                <span className="main-text">{props.name}</span>
             </div>
             <div className="row text-center mb-3">
-                <strong>{props.price}</strong>
+                <strong className="main-text">{props.price}</strong>
             </div>
             <div className="row mb-2">
                 <button type="button" 
-                className="btn btn-outline-warning"
+                className="btn btn-add-to-cart main-text"
                 onClick={AddToCart}
                 >add to cart</button>
             </div>

@@ -14,7 +14,7 @@ function Home (){
             <div style={{marginTop:"150px"}}></div>
             <div className="row mt-4">
                 <div className="offset-md-1">
-                    <h2>
+                    <h2 className="title-text">
                         Discover popular products
                     </h2>
                 </div>

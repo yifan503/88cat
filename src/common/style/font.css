@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Cyrene;
+    src: url('../font/Cyrene.otf');
+  }
+  .main-text{
+    font-family: Cyrene;
+    font-size: large;
+  }
+
+@font-face {
+    font-family: TheNightWatch;
+    src: url('../font/TheNightWatch.ttf');
+  }
+  .title-text{
+    font-family: TheNightWatch;
+    /* font-size: large; */
+  }

@@ -42,9 +42,9 @@ class Register extends React.Component{
             <div className="container d-flex justify-content-center mt-5">
                 <form className="col-md-4" onSubmit={this.handleSubmit}>
                     <div className="row mb-4 text-center">
-                        <h1 className="display-3">Register</h1>
+                        <h1 className="title-text">Register</h1>
                     </div>
-                    <div className="form-floating mb-4 row">
+                    <div className="form-floating mb-4 row main-text">
                         <input 
                         name="username" 
                         type="email" 
@@ -53,11 +53,12 @@ class Register extends React.Component{
                         className="form-control"
                         id="floatingInput"
                         placeholder="name@example.com"
+                        required
                         />
                         <label htmlFor="floatingInput">Email Address</label>
 
                     </div>
-                    <div className="form-floating mb-4 row">
+                    <div className="form-floating mb-4 row main-text">
                         <input 
                         name="password" 
                         type="password" 
@@ -66,11 +67,12 @@ class Register extends React.Component{
                         className="form-control"
                         id="floatingPassword"
                         placeholder="Password"
+                        required
                         />
                         <label htmlFor="floatingPassword">Password</label>
                     </div>
-                    <div className="text-center">
-                        <button type="submit" className="btn btn-outline-primary col-6">Register</button>
+                    <div className="text-center main-text">
+                        <button type="submit" className="btn btn-add-to-cart col-6">Register</button>
                     </div>
                 </form>
             </div>

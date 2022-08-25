@@ -44,9 +44,9 @@ class Login extends React.Component{
             <div className="container d-flex justify-content-center mt-5">
                 <form className="col-md-4" onSubmit={this.handleSubmit}>
                     <div className="row mb-4 text-center">
-                        <h1>Login</h1>
+                        <h1 className="title-text">Login</h1>
                     </div>
-                    <div className="form-floating mb-4 row">
+                    <div className="form-floating mb-4 row main-text">
                         <input 
                         name="username" 
                         type="email" 
@@ -55,11 +55,12 @@ class Login extends React.Component{
                         className="form-control"
                         id="floatingInput"
                         placeholder="name@example.com"
+                        required
                         />
                         <label htmlFor="floatingInput">Email Address</label>
 
                     </div>
-                    <div className="form-floating mb-4 row">
+                    <div className="form-floating mb-4 row main-text">
                         <input 
                         name="password" 
                         type="password" 
@@ -68,14 +69,15 @@ class Login extends React.Component{
                         className="form-control"
                         id="floatingPassword"
                         placeholder="Password"
+                        required
                         />
                         <label htmlFor="floatingPassword">Password</label>
                     </div>
                     <div className="text-center">
-                        <button type="submit" className="btn btn-outline-primary col-6">Login</button>
+                        <button type="submit" className="btn btn-add-to-cart col-6 main-text">Login</button>
                     {/* <input type="submit" value="Login" /> */}
                     </div>
-                    <div className="text-center mt-3">
+                    <div className="text-center mt-3 main-text">
                         new user? <Link to="/Register">register</Link> now!
                     </div>
                 </form>

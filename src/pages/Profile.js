@@ -6,10 +6,11 @@ import {useNavigate,Link} from 'react-router-dom'
 
 function Profile (){
     const navigate = useNavigate();
-    const [cookies, setCookie] = useCookies(['username']);
+    const [cookies, setCookie, removeCookie] = useCookies(['username']);
 
     const LogOut = ()=>{
         //删除user cookie
+        removeCookie('username',{path:'/'});
         navigate('/Login');
     }
 

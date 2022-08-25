@@ -13,11 +13,11 @@ function ShoppingCart(){
 
     return (
         <div className="container">
-            <h1>ShoppingCart</h1>
+            <h1 className="title-text text-center mt-3 mb-3">ShoppingCart</h1>
             {/* 循环插入cartitem */}
             {
                 IsEmpty ?
-                <div>
+                <div className="main-text text-center">
                     your cart is empty
                 </div>
                 :
