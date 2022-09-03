@@ -25,7 +25,7 @@ function Heading (){
                         <input type="search" className="form-control main-text" placeholder="search.." />
                     </div>                    
                 </div>
-                <div className="col-md-2 offset-md-3">
+                <div className="col-md-2 offset-md-3 text-center">
                     <img src={logo} style={{width:"150px"}} alt="logo"/>
                 </div>
                 <div className="col-md-1 offset-md-3 pt-5 ps-5">

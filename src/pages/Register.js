@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import {API} from '../components/API'
 import {useNavigate} from 'react-router-dom'
+import {useCookies} from 'react-cookie'
 
 class Register extends React.Component{
     
@@ -82,7 +83,8 @@ class Register extends React.Component{
 
 function RegisterWithNavigate(props){
     let navigate = useNavigate();
-    return <Register {...props} navigate={navigate}/>
+    let [cookies, setCookie] = useCookies(['username']);
+    return <Register {...props} navigate={navigate } setCookie={setCookie} />
 }
 
 export default RegisterWithNavigate;

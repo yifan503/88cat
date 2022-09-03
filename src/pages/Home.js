@@ -11,8 +11,9 @@ function Home (){
                     <Carousel />
                 </div>
             </div>
-            <div style={{marginTop:"150px"}}></div>
-            <div className="row mt-4">
+            <div className="pt-md-5 pb-md-5"></div>
+            <div className="pt-3 pb-3"></div>
+            <div className="row mt-4 pt-2">
                 <div className="offset-md-1">
                     <h2 className="title-text">
                         Discover popular products

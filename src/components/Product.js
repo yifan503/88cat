@@ -42,7 +42,7 @@ function Product (props){
             <div className="row text-center mb-3">
                 <strong className="main-text">{props.price}</strong>
             </div>
-            <div className="row mb-2">
+            <div className="row mb-2 mx-5 mx-md-0">
                 <button type="button" 
                 className="btn btn-add-to-cart main-text"
                 onClick={AddToCart}

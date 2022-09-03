@@ -17,7 +17,7 @@ import AllProducts from './pages/AllProducts'
 
 function App() {
   return (
-    <BrowserRouter basename='/'>
+    <BrowserRouter>
       <Heading />
       <Routes>
         <Route path="/" element={<Home />} />
