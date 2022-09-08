@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import {API} from '../components/API'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 import {useCookies} from 'react-cookie'
 
 class Register extends React.Component{
@@ -74,6 +74,9 @@ class Register extends React.Component{
                     </div>
                     <div className="text-center main-text">
                         <button type="submit" className="btn btn-add-to-cart col-6">Register</button>
+                    </div>
+                    <div className="text-center mt-3 main-text">
+                        Back to <Link to="/Login">Login</Link>
                     </div>
                 </form>
             </div>

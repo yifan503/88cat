@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link,NavLink} from 'react-router-dom'
 import {LoginUser} from './Cookie'
 
 
@@ -47,25 +47,25 @@ function Navbar (){
                                     "
                         id="navbarSupportedContent">
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/">Home</Link>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/About">About</Link>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/About">About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/CatsTreats">Cats' treats</Link>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsTreats">Cats' treats</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/CatsToys">Cats' toys</Link>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsToys">Cats' toys</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/CatsCare">Cats' care</Link>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsCare">Cats' care</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/AllProducts">All</Link>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/AllProducts">All</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/About">Sale</Link>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/Sale">Sale</NavLink>
                         </li>
                     </ul>
                 </div>

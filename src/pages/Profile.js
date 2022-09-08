@@ -18,6 +18,13 @@ function Profile (){
         <div className="container">
             <h1>user profile page</h1>
             <p>{LoginUser()}</p>
+            {
+                LoginUser()=="admin@admin.com"?
+                <Link className="row" to="/Admin_page_">admin page</Link>
+                :
+                <span></span>
+            }
+            
             <button className="btn btn-danger" onClick={LogOut}>Log out</button>
         </div>
     );

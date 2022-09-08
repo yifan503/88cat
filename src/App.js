@@ -14,6 +14,8 @@ import CatsTreats from './pages/CatsTreats'
 import CatsToys from './pages/CatsToys'
 import CatsCare from './pages/CatsCare'
 import AllProducts from './pages/AllProducts'
+import Sale from './pages/Sale'
+import Admin from './pages/Admin'
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/CatsToys" element={<CatsToys />} />
         <Route path="/CatsCare" element={<CatsCare />} />
         <Route path="/AllProducts" element={<AllProducts />} />
+        <Route path="/Sale" element={<Sale />} />
+        <Route path="/Admin_page_" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
