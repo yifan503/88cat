@@ -16,6 +16,7 @@ import CatsCare from './pages/CatsCare'
 import AllProducts from './pages/AllProducts'
 import Sale from './pages/Sale'
 import Admin from './pages/Admin'
+import EditProduct from './pages/EditProduct'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/AllProducts" element={<AllProducts />} />
         <Route path="/Sale" element={<Sale />} />
         <Route path="/Admin_page_" element={<Admin />} />
+        <Route path="/EditProduct" element={<EditProduct />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

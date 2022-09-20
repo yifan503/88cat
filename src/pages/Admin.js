@@ -3,6 +3,8 @@ import {useNavigate} from 'react-router-dom'
 import {LoginUser} from '../components/Cookie'
 import axios from 'axios'
 import {API} from '../components/API'
+import AllUsers from '../components/Admin/AllUsers'
+import AllProducts from '../components/Admin/AllProducts'
 
 function Admin(){
     let navigate = useNavigate();
@@ -16,8 +18,11 @@ function Admin(){
     },[]);
 
     return(
-        <div>
-            Admin
+        <div className="container">
+            <h1 className="title-text text-center">Admin</h1>
+            <AllUsers />
+            <AllProducts />
+            <button>All Orders</button>
         </div>
     );
 }

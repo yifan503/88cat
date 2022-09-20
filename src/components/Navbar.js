@@ -53,13 +53,13 @@ function Navbar (){
                             <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/About">About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsTreats">Cats' treats</NavLink>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsTreats">Cat treats</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsToys">Cats' toys</NavLink>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsToys">Cat toys</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsCare">Cats' care</NavLink>
+                            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/CatsCare">Cat care</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/AllProducts">All</NavLink>
