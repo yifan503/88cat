@@ -43,6 +43,9 @@ function AllProducts(){
         //跳转到编辑界面
         navigate('/EditProduct');
     }
+    const AddProduct = () =>{
+        navigate('/AddNewProduct')
+    }
 
     return(
         <div>
@@ -80,7 +83,7 @@ function AllProducts(){
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Add product</button>
+                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={AddProduct}>Add product</button>
                         </div>
                         </div>
                     </div>
