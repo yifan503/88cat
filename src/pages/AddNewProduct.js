@@ -17,6 +17,11 @@ function AddNewProduct (props){
 
     },[]);
 
+    let imgList = [];
+    for(let i = 1; i < 23; i++){
+        imgList.push(i);
+    }
+
     const [Size,setSize] = useState("");
     const [Color,setColor] = useState("");
     const [Flavour,setFlavour] = useState("");
@@ -28,6 +33,7 @@ function AddNewProduct (props){
     const [Catagories,setCatagories] = useState("");
     const [Storage,setStorage] = useState("");
     const [Discount,setDiscount] = useState("");
+    const [Img ,setImg] = useState("");
     
 
     const convertToString = (value) =>{
@@ -71,6 +77,9 @@ function AddNewProduct (props){
     const handleDiscountChange = (e)=>{
         setDiscount(e.target.value);
     }
+    const handleImgChange = (e)=>{
+        setImg(e.target.value);
+    }
 
     const handleCancel = (e)=>{
         //返回admin界面
@@ -103,6 +112,7 @@ function AddNewProduct (props){
             data.append('storage',Storage);
             data.append('onSale',onSale);
             data.append('discount',Discount);
+            data.append('img',Img);
             //发送请求
             axios.post(API+'/updateProduct',data).then((res)=>{
                 if(res.data == "success"){
@@ -241,6 +251,23 @@ function AddNewProduct (props){
                         id="floatingInput"
                         />
                         <label htmlFor="floatingInput">Discount</label>
+                    </div>
+                    <div className="form-floating main-text col-3">
+                        <select 
+                        value={convertToString(Img)}
+                        onChange={handleImgChange}
+                        className="form-control"
+                        id="floatingSelect"
+                        >
+                            <option value="">no image</option>
+                            {
+                                imgList.map((img_index)=>
+                                    <option value={img_index}>{img_index}</option>
+                                )
+                            }
+                            
+                        </select>
+                        <label htmlFor="floatingSelect">Image</label>
                     </div>
                 </div>
                 <button type="button" className="btn btn-warning" onClick={handleCancel} >cancel</button>

@@ -18,6 +18,8 @@ import Sale from './pages/Sale'
 import Admin from './pages/Admin'
 import EditProduct from './pages/EditProduct'
 import AddNewProduct from './pages/AddNewProduct'
+import ProductDetail from './pages/ProductDetail'
+import CheckOut from './pages/CheckOut'
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
         <Route path="/Admin_page_" element={<Admin />} />
         <Route path="/EditProduct" element={<EditProduct />} />
         <Route path="/AddNewProduct" element={<AddNewProduct />} />
+        <Route path="/ProductDetail" element={<ProductDetail />} />
+        <Route path="/CheckOut" element={<CheckOut />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

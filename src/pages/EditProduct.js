@@ -18,6 +18,11 @@ function EditProduct (props){
 
     },[]);
 
+    let imgList = [];
+    for(let i = 1; i < 23; i++){
+        imgList.push(i);
+    }
+
     const [cookies, setCookie, removeCookie] = useCookies(['EditProductInfo']);
     const originalProductInfo = cookies.EditProductInfo;
     const [Size,setSize] = useState(originalProductInfo[1]);
@@ -31,7 +36,8 @@ function EditProduct (props){
     const [Catagories,setCatagories] = useState(originalProductInfo[9]);
     const [Storage,setStorage] = useState(originalProductInfo[10]);
     const [Discount,setDiscount] = useState(originalProductInfo[12]);
-    
+    const [Img ,setImg] = useState("");
+
 
     const convertToString = (value) =>{
         if(!value || value=="null"){
@@ -74,6 +80,10 @@ function EditProduct (props){
     const handleDiscountChange = (e)=>{
         setDiscount(e.target.value);
     }
+    const handleImgChange = (e)=>{
+        setImg(e.target.value);
+    }
+
     const handleSubmit = (e)=>{
         let data = new FormData();
         //封装表单数据
@@ -94,6 +104,7 @@ function EditProduct (props){
         data.append('storage',Storage);
         data.append('onSale',onSale);
         data.append('discount',Discount);
+        data.append('img',Img);
         //发送请求
         axios.post(API+'/updateProduct',data).then((res)=>{
             if(res.data == "success"){
@@ -231,6 +242,23 @@ function EditProduct (props){
                         id="floatingInput"
                         />
                         <label htmlFor="floatingInput">Discount</label>
+                    </div>
+                    <div className="form-floating main-text col-3">
+                        <select 
+                        value={convertToString(Img)}
+                        onChange={handleImgChange}
+                        className="form-control"
+                        id="floatingSelect"
+                        >
+                            <option value="">no image</option>
+                            {
+                                imgList.map((img_index)=>
+                                    <option value={img_index}>{img_index}</option>
+                                )
+                            }
+                            
+                        </select>
+                        <label htmlFor="floatingSelect">Image</label>
                     </div>
                 </div>
                 <button type="submit" className="btn btn-success">save changes</button>
