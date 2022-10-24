@@ -7,19 +7,19 @@ function PopularProducts (){
         {
             img:logo_angry,
             name:"kitty favourite meat ball",
-            price:"$1.99",
+            price:"1.99",
             id:"1"
         },
         {
             img:logo_angry,
             name:"cat cat stick",
-            price:"$2.99",
+            price:"2.99",
             id:"2"
         },
         {
             img:logo_angry,
             name:"chic kitty jacket",
-            price:"$100",
+            price:"100",
             id:"3"
         }
     ]

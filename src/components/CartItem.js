@@ -53,7 +53,7 @@ function CartItem(props){
                 <div className="col-1 align-self-center">
                     {props.price}
                 </div>
-                <div className="col-1 align-self-center btn-group">
+                <div className="col-2 align-self-center btn-group">
                     <button onClick={ReduceItem} className="me-1 btn btn-light">-</button>
                     <div className="align-self-center">
                         {props.amount}

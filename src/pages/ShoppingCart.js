@@ -40,9 +40,14 @@ function ShoppingCart(){
                 )
             }
             {/* 跳转结账界面 */}
-            <div className="main-text text-center mt-3">
-                <button onClick={goToCheckOut} className="col-3 btn btn-outline-primary">Go to check out</button>
-            </div>
+            {
+                IsEmpty?
+                <div></div>
+                :
+                <div className="main-text text-center mt-5">
+                    <button onClick={goToCheckOut} className="col-3 btn btn-outline-secondary">Go to check out</button>
+                </div>
+            }
             
         </div>
     );

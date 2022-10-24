@@ -1,0 +1,5 @@
+.hr-dashed-fixed {
+    border: 0;
+    padding-top: 1px;
+    background: repeating-linear-gradient(to right, #000000 0 var(--dashed-filled, 10px), transparent 0 calc(var(--dashed-filled, 10px) + var(--dashed-open, 6px)));
+}
