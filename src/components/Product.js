@@ -74,10 +74,19 @@ function Product (props){
                 </div>
             </div>
             <div className="row mb-2 mx-5 mx-md-0">
-                <button type="button" 
-                className="btn btn-add-to-cart main-text"
-                onClick={AddToCart}
-                >add to cart</button>
+                {props.storge > 1 ?
+                
+                    <button type="button" 
+                    className="btn btn-add-to-cart main-text"
+                    onClick={AddToCart}
+                    >add to cart</button>
+                :
+                    <button type="button"
+                    className="btn btn-secondary main-text"
+                    disabled>
+                    out of stock
+                    </button>
+                }
             </div>
         </div>
     );

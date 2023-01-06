@@ -58,6 +58,7 @@ const ButtonWrapper = ({ currency, showSpinner, amount }) => {
                 onApprove={function (data, actions) {
                     return actions.order.capture().then(function (details) {
                         // Your code here after capture the order
+                        // 获取订单信息，像后端发送请求储存订单，清空购物车
                         console.log(details);
                     });
                 }}
