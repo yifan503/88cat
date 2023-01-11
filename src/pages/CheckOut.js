@@ -8,10 +8,24 @@ function CheckOut(){
     // 从cookie读取购物车
     const [cookies, setCookie] = useCookies(['shoppingCart']);
     const CartList = cookies.shoppingCart;
+    const purchase_list = [];
     let totalPrice = 0;
     for(let i = 0; i < CartList.length; i++){
+        // 计算总价
         totalPrice += CartList[i].price * CartList[i].amount;
+        // 创建订单列表
+        let tempObj = {
+            description: CartList[i].name,
+            amount: CartList[i].amount,
+            price: {
+                currency_code: "GBP",
+                value: CartList[i].price,
+            },
+        };
+        purchase_list.push(tempObj);
     }
+    totalPrice = (totalPrice).toFixed(2) // 取整
+
 
     return(
         <div className="container">
@@ -55,6 +69,7 @@ function CheckOut(){
                         currency={"GBP"}
                         showSpinner={false}
                         amount = {totalPrice}
+                        purchase_list = {purchase_list}
                     />
                 </div>
             </div>

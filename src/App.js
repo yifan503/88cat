@@ -20,6 +20,7 @@ import EditProduct from './pages/EditProduct'
 import AddNewProduct from './pages/AddNewProduct'
 import ProductDetail from './pages/ProductDetail'
 import CheckOut from './pages/CheckOut'
+import PaymentSuccess from './pages/PaymentSuccess'
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/AddNewProduct" element={<AddNewProduct />} />
         <Route path="/ProductDetail" element={<ProductDetail />} />
         <Route path="/CheckOut" element={<CheckOut />} />
+        <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
