@@ -24,7 +24,7 @@ function PopularProducts (){
         }
     ]
     return (
-        <div className="row offset-md-1">
+        <div className="row offset-md-1 row-cols-1 row-cols-md-3 row-cols-lg-4 g-5 mt-5">
             {products.map(
                 product => 
                     <Product 

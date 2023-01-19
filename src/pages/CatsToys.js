@@ -20,7 +20,7 @@ function CatsToys (){
     return(
         <div className="container">
             <h1 className="title-text text-center">Cats'Treats</h1>
-            <div className="row mt-5">
+            <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-5 mt-5">
                 {
                     ProductList.map(
                         product => 

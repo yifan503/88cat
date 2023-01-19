@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import {API} from '../components/API'
 
+
 function Sale (){
     return(
         <div className="container">

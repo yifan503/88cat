@@ -61,33 +61,43 @@ function Product (props){
     }
 
     return (
-        <div className="container col-md-3">
-            <div onClick={EnterProductDetail}>
-                <div className="row mb-3 ">
-                    <img src={props.img} alt=".." />
+        <div className="col">
+            <div className="card shadow border-light" onClick={EnterProductDetail}>
+                <div className="">
+                    <img src={props.img} className="card-img-top" alt=".." />
                 </div>
-                <div className="row text-center mb-3">
-                    <span className="main-text">{props.name}</span>
-                </div>
-                <div className="row text-center mb-3">
-                    <strong className="main-text">{props.price}</strong>
+                <div className="card-body">
+                    <div className="card-title">
+                        <div className="row text-center mb-3">
+                            <span className="main-text">{props.name}</span>
+                        </div>
+                    </div>
+                    <div className="card-text">
+                        <div className="row text-center mb-3">
+                            <strong className="main-text">{props.price}</strong>
+                        </div>
+                    </div>
+                    <div className="">
+                        <div className="row mb-2 mx-5 mx-md-0">
+                            {props.storge > 1 ?
+                            
+                                <button type="button" 
+                                className="btn btn-add-to-cart main-text"
+                                onClick={AddToCart}
+                                >add to cart</button>
+                            :
+                                <button type="button"
+                                className="btn btn-secondary main-text"
+                                disabled>
+                                out of stock
+                                </button>
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="row mb-2 mx-5 mx-md-0">
-                {props.storge > 1 ?
-                
-                    <button type="button" 
-                    className="btn btn-add-to-cart main-text"
-                    onClick={AddToCart}
-                    >add to cart</button>
-                :
-                    <button type="button"
-                    className="btn btn-secondary main-text"
-                    disabled>
-                    out of stock
-                    </button>
-                }
-            </div>
+            
+            
         </div>
     );
 }
